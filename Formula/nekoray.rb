@@ -8,7 +8,7 @@ cask "nekoray" do
   desc "Qt based cross-platform GUI proxy configuration manager (backend: v2ray / sing-box)"
   homepage "https://matsuridayo.github.io/"
 
-  app "nekoray-#{version}-2023-01-13-macos-amd64.dmg/nekoray.app"
+  app "nekoray.app"
 
   zap trash: "~/Library/Preferences/nekoray/"
 end
