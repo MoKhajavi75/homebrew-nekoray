@@ -10,3 +10,4 @@ or
 brew tap tdjnodj/nekoray
 brew install nekoray
 ```
+The 2.12 is the last version of nekoray for macOS
