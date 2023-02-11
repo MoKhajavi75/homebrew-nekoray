@@ -5,7 +5,7 @@ oldVersion=$(cat api/version.txt)
 oldTag=$(cat api/tag.txt)
 
 # Get the newest TAG.
-newTag=$(curl https://api.github.com/repos/matsuridayo/nekoray/tags -k | grep 'name' | cut -d\" -f4 | head -1)
+newTag=$(curl https://api.github.com/repos/matsuridayo/nekoray/tags -u "tdjnodj:"| grep 'name' | cut -d\" -f4 | head -1)
 if [ -z "$newTag" ]; then
     echo "Didn't get the newest TAG!"
     exit 1
