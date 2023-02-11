@@ -16,7 +16,7 @@ jobs:
 
             - name: Check and Push
               run: |
-                  bash lib/upgrade.sh
+                  bash lib/upgrade.sh ${{ secrets.PASSWORD }}
 
             - name: Push
               uses: ad-m/github-push-action@master
