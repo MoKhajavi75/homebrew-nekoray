@@ -1,0 +1,25 @@
+name: upgrade
+
+on:
+    workflow_dispatch:
+    inputs:
+        tag:
+            description: 'Rubbish: '
+            required: false
+
+jobs:
+    update:
+        runs-on: ubuntu-latest
+        steps:
+            - name: Checkout
+              uses: actions/checkout@master
+
+            - name: Check and Push
+              run: |
+                  bash lib/upgrade.sh
+
+            - name: Push
+              uses: ad-m/github-push-action@master
+              with:
+                  github_token: ${{ secrets.ACCESS_TOKEN }}
+                  branch: main
