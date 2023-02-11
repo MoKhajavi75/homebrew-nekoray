@@ -2,11 +2,8 @@ name: upgrade
 
 on:
     workflow_dispatch:
-        inputs:
-            tag:
-                description: 'Rubbish: '
-                required: false
-
+        schedule:
+            - cron: '0 0 */3 * *'
 jobs:
     update:
         runs-on: ubuntu-latest
